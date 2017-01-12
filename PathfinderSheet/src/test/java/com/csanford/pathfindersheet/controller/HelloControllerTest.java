@@ -19,7 +19,8 @@ public class HelloControllerTest
     {
 	HelloController controller = new HelloController();
 	MockMvc mockMvc = standaloneSetup( controller ).build();
-	mockMvc.perform( get( "/" ) ).andExpect( view().name( "hello" ) );
+	mockMvc.perform( get( "/" ) ).
+		andExpect( view().name( "hello" ) );
     }
 
 }

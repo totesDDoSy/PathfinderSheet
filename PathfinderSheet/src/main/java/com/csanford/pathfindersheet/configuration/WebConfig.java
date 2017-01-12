@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.csanford.pathfindersheet.configuration;
 
 import org.springframework.context.annotation.Bean;
@@ -22,16 +17,16 @@ import org.springframework.web.servlet.view.JstlView;
 @ComponentScan( basePackages = "com.csanford.pathfindersheet" )
 public class WebConfig
 {
-    
+
     @Bean
     public ViewResolver viewResolver()
     {
-        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-        viewResolver.setViewClass(JstlView.class);
-        viewResolver.setPrefix("/WEB-INF/views/");
-        viewResolver.setSuffix(".jsp");
-        
-        return viewResolver;
+	InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+	viewResolver.setViewClass( JstlView.class );
+	viewResolver.setPrefix( "/WEB-INF/views/" );
+	viewResolver.setSuffix( ".jsp" );
+
+	return viewResolver;
     }
-    
+
 }
